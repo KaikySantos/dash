@@ -8,6 +8,8 @@ import "./globals.css";
 import { Navigation } from "@/components/navigation";
 import { Navbar } from "@/components/navbar";
 
+import { ModalProvider } from '@/components/providers/modal-provider'
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -34,6 +36,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+          <ModalProvider />
           <div className="h-full flex">
             <Navigation />
 
