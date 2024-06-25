@@ -30,7 +30,7 @@ export default async function Home() {
         {t("Dashboard.Subtitle")}
       </p>
 
-      <div className="flex flex-col xl:flex-row gap-8 mt-8 mb-4">
+      <div className="flex flex-col xl:flex-row gap-8 mt-8 mb-8">
         <DashboardCard
           label={t("Dashboard.CardMoney.Label")}
           type="money"

@@ -20,8 +20,8 @@ export const NavItem = ({
   return (
     <Button
       className={cn(
-        "bg-transparent h-12 flex items-center text-muted-foreground justify-start gap-2 px-4 py-3 cursor-pointer rounded-md hover:bg-accent/80",
-        selected && "bg-accent text-primary font-medium cursor-default"
+        "bg-transparent h-12 flex items-center text-muted justify-start gap-2 px-4 py-3 cursor-pointer rounded-md hover:bg-accent/10",
+        selected && "bg-accent/80 text-primary font-medium cursor-default hover:bg-accent/80"
       )}
       {...props}
     >

@@ -68,15 +68,15 @@ export function Navigation() {
       <aside
         ref={sidebarRef}
         className={cn(
-          "h-full min-h-lvh border-r bg-background overflow-y-auto fixed flex w-[300px] flex-col justify-between z-[99999]",
+          "h-full min-h-lvh border-r bg-primary overflow-y-auto fixed flex w-[300px] flex-col justify-between z-[99999]",
           isResetting && "transition-all ease-in-out duration-300",
           isMobile && "w-0"
         )}
       >
         <div className="flex flex-col my-7 px-7">
-          <h2 className="text-4xl font-bold tracking-tight">
+          <h2 className="text-4xl text-white font-bold tracking-tight">
             Dash
-            <span className="text-primary">.</span>
+            <span className="text-secondary">.</span>
           </h2>
 
           <p className="mt-8 mb-4 text-muted-foreground text-sm tracking-wider">
