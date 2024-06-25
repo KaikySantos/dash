@@ -26,7 +26,7 @@ export default async function Home() {
         Your recents transactions activity and all
       </p>
 
-      <div className="flex gap-8 mt-8 mb-4">
+      <div className="flex flex-col xl:flex-row gap-8 mt-8 mb-4">
         <DashboardCard type="money" value={new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(sumTotalValues)} />
         <DashboardCard type="units" value={String(sumTotalUnits)} />
       </div>

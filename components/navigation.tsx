@@ -134,7 +134,7 @@ export function Navigation() {
           (!isCollapsed && isMobile) && "right-0"
         )}
       >
-        <MenuIcon className="h-6 w-6 text-muted-foreground" />
+        <MenuIcon className="h-8 w-8 text-primary" />
       </div>
 
       <div
