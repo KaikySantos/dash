@@ -2,6 +2,7 @@
 
 import { ElementRef, useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
+import { useSettings } from "@/hooks/use-settings"
 
 import { cn } from "@/lib/utils"
 import { useMediaQuery } from "usehooks-ts"
@@ -13,6 +14,8 @@ import { NavItem } from "./nav-item"
 
 export function Navigation() {
   const t = useTranslations("Navigation")
+
+  const settings = useSettings()
 
   const pathname = usePathname()
   const isMobile = useMediaQuery("(max-width: 768px)")
@@ -117,6 +120,7 @@ export function Navigation() {
             <NavItem
               icon={Settings}
               title={t("NavItems.Settings")}
+              onClick={settings.onOpen}
             />
           </div>
         </div>

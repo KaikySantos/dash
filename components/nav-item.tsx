@@ -1,7 +1,9 @@
 import { cn } from '@/lib/utils';
 import { LucideProps } from 'lucide-react';
 
-interface NavItemProps {
+import { Button, ButtonProps } from './ui/button';
+
+interface NavItemProps extends ButtonProps {
   title: string
   icon: React.FC<LucideProps>
   selected?: boolean
@@ -12,14 +14,16 @@ export const NavItem = ({
   title,
   icon: Icon,
   selected,
-  notifications
+  notifications,
+  ...props
 }: NavItemProps) => {
   return (
-    <div
+    <Button
       className={cn(
-        "flex items-center text-muted-foreground justify-start gap-2 px-4 py-3 cursor-pointer rounded-md hover:bg-accent/80",
+        "bg-transparent h-12 flex items-center text-muted-foreground justify-start gap-2 px-4 py-3 cursor-pointer rounded-md hover:bg-accent/80",
         selected && "bg-accent text-primary font-medium cursor-default"
       )}
+      {...props}
     >
       <Icon size={20} className={selected ? "fill-current" : ""} />
       {title}
@@ -31,6 +35,6 @@ export const NavItem = ({
           </span>
         </div>
       )}
-    </div>
+    </Button>
   )
 }
