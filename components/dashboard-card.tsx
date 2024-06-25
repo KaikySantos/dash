@@ -2,13 +2,12 @@ import { CircleDollarSign, Package } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 interface DashboardCardProps {
+  label: string
   type: "units" | "money",
   value: string
 }
 
-export function DashboardCard({ type, value }: DashboardCardProps) {
-  const label = type === "money" ? "Total pedidos em reais" : "Total pedidos em unidades"
-
+export function DashboardCard({ label, type, value }: DashboardCardProps) {
   return (
     <div className="w-full rounded border p-6 flex gap-4 bg-card">
       {type === "money" ? (
@@ -28,10 +27,6 @@ export function DashboardCard({ type, value }: DashboardCardProps) {
         <p className="text-card-foreground font-semibold text-5xl mt-1">
           {value}
         </p>
-
-        <Badge variant="success" className="w-min mt-4 text-nowrap">
-          + 124 novos
-        </Badge>
       </div>
     </div>
   )

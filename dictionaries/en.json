@@ -15,5 +15,22 @@
   },
   "Navbar": {
     "SearchPlaceholder": "Search"
+  },
+  "Dashboard": {
+    "Title": "My Dashboard",
+    "Subtitle": "Your recent transactions activity",
+    "CardMoney": {
+      "Label": "Total orders in reais"
+    },
+    "CardUnits": {
+      "Label": "Total orders in units"
+    },
+    "Table Columns": {
+      "Customer": "Customer",
+      "Product": "Product",
+      "Status": "Status",
+      "Date": "Date",
+      "Amount": "Amount"
+    }
   }
 }

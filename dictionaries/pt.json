@@ -15,5 +15,22 @@
   },
   "Navbar": {
     "SearchPlaceholder": "Pesquisar"
+  },
+  "Dashboard": {
+    "Title": "Dashboard",
+    "Subtitle": "Suas recentes atividades de transação",
+    "CardMoney": {
+      "Label": "Pedidos totais em reais"
+    },
+    "CardUnits": {
+      "Label": "Pedidos totais em unidades"
+    },
+    "Table Columns": {
+      "Customer": "Clientes",
+      "Product": "Produtos",
+      "Status": "Status",
+      "Date": "Data",
+      "Amount": "Valor Total"
+    }
   }
 }

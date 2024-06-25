@@ -12,7 +12,6 @@ interface ColumnHeaderSortableProps<TData, TValue>
 export function ColumnHeaderSortable<TData, TValue>({
   column,
   title,
-  className,
 }: ColumnHeaderSortableProps<TData, TValue>) {
   function changeSorting() {
     if (column.getIsSorted() === "desc") {
