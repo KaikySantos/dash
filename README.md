@@ -14,7 +14,7 @@ Simples interface de uma dashboard
 ## Como rodar?
 ```bash
 # Clone o repositório
-git clone https://github.com/KaikySantos/dash..git
+git clone https://github.com/KaikySantos/dash.git
 
 # Entre na pasta
 cd dash.
