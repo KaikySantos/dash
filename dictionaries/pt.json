@@ -12,5 +12,8 @@
       "Messages": "Mensagens",
       "Settings": "Configurações"
     }
+  },
+  "Navbar": {
+    "SearchPlaceholder": "Pesquisar"
   }
 }

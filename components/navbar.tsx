@@ -7,14 +7,16 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 
 import { useSettings } from "@/hooks/use-settings";
+import { useTranslations } from "next-intl";
 
 export function Navbar() {
+  const t = useTranslations("Navbar")
   const settings = useSettings()
 
   return (
     <nav className="flex items-center justify-between px-6 py-2 bg-background border-b">
       <Input
-        placeholder="Pesquisar"
+        placeholder={t("SearchPlaceholder")}
         className="max-w-sm"
         leftIcon={Search}
       />
