@@ -5,7 +5,7 @@ export default function Home() {
 
   return (
     <div className="p-4">
-      <p>{t('Test')}</p>
+      <p>Hello World!</p>
     </div>
   );
 }

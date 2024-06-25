@@ -1,3 +1,21 @@
 {
-  "Test": "Teste Dicionário"
+  "Navbar": {
+    "UserDropdown": {
+      "Theme": {
+        "Label": "Tema",
+        "Options": {
+          "Light": "Claro",
+          "Dark": "Escuro"
+        }
+      },
+      "Language": {
+        "Label": "Idioma",
+        "Options": {
+          "English": "Inglês",
+          "Portuguese": "Português"
+        }
+      },
+      "Log Out": "Sair"
+    }
+  }
 }

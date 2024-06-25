@@ -1,15 +1,30 @@
 "use client"
 
-import { useState } from "react";
-
-import { ChevronDown, LogOut, Moon, Sun } from "lucide-react";
+import { ChevronDown, LogOut } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
 
+import { useTheme } from "next-themes"
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname, useRouter } from "@/navigation";
+
 export function UserDropdownMenu() {
-  const [theme, setTheme] = useState("light")
-  const [lang, setLang] = useState("en")
+  const userDropdownTranslations = useTranslations("Navbar.UserDropdown")
+
+  const { theme, setTheme } = useTheme()
+  const locale = useLocale()
+
+  const pathname = usePathname()
+  const router = useRouter()
+
+  function onChangeTheme(theme: string) {
+    setTheme(theme)
+  }
+
+  function onChangeLocale(locale: string) {
+    router.push(pathname, { locale: locale as "en" | "pt" })
+  }
 
   return (
     <DropdownMenu>
@@ -32,25 +47,29 @@ export function UserDropdownMenu() {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel className="font-medium">Theme</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
+        <DropdownMenuLabel className="font-medium">
+          {userDropdownTranslations('Theme.Label')}
+        </DropdownMenuLabel>
+        <DropdownMenuRadioGroup value={theme} onValueChange={onChangeTheme}>
           <DropdownMenuRadioItem className="gap-2" value="light">
-            Light
+            {userDropdownTranslations('Theme.Options.Light')}
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem className="gap-2" value="dark">
-            Dark
+            {userDropdownTranslations('Theme.Options.Dark')}
           </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
 
         <DropdownMenuSeparator />
         
-        <DropdownMenuLabel className="font-medium">Language</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
-          <DropdownMenuRadioItem className="gap-2" value="light">
-            English
+        <DropdownMenuLabel className="font-medium">
+          {userDropdownTranslations('Language.Label')}
+        </DropdownMenuLabel>
+        <DropdownMenuRadioGroup value={locale} onValueChange={onChangeLocale}>
+          <DropdownMenuRadioItem className="gap-2" value="en">
+            {userDropdownTranslations('Language.Options.English')}
           </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem className="gap-2" value="dark">
-            Portuguese
+          <DropdownMenuRadioItem className="gap-2" value="pt">
+            {userDropdownTranslations('Language.Options.Portuguese')}
           </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
 
@@ -58,7 +77,9 @@ export function UserDropdownMenu() {
 
         <DropdownMenuItem className="cursor-pointer flex items-center py-1">
           <LogOut className="mr-2 ml-2 h-4 w-4" />
-          <span>Log out</span>
+          <span>
+            {userDropdownTranslations('Log Out')}
+          </span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
