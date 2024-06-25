@@ -5,6 +5,7 @@ import {getMessages} from 'next-intl/server';
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import "./globals.css";
 
+import { Navigation } from "@/components/navigation";
 import { Navbar } from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,8 +34,17 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <Navbar />
-            {children}
+          <div className="h-full flex">
+            <Navigation />
+
+            <main className="flex-1 h-full min-h-screen md:pl-[300px] overflow-y-auto">
+              <Navbar />
+
+              <div className="">
+                {children}
+              </div>
+            </main>
+          </div>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
