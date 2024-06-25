@@ -10,3 +10,18 @@ Simples interface de uma dashboard
 - Dark Mode e Light Mode.
 - Internacionalização: Idiomas português e inglês.
 - Criação de tabela com Tanstack, com paginação e filtragem.
+
+## Como rodar?
+```bash
+# Clone o repositório
+git clone https://github.com/KaikySantos/dash..git
+
+# Entre na pasta
+cd dash.
+
+# Instale as dependências
+pnpm install
+
+# Rode a aplicação
+pnpm run dev
+```
