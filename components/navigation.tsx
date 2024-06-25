@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { useMediaQuery } from "usehooks-ts"
 
-import { ClipboardList, LineChart, ListOrdered, MenuIcon, Users } from "lucide-react"
+import { ClipboardList, LayoutDashboard, LineChart, ListOrdered, MenuIcon, MessageCircleMore, Package, PieChart, Settings, Users } from "lucide-react"
 
 import { NavItem } from "./nav-item"
 
@@ -79,18 +79,18 @@ export function Navigation() {
 
           <div className="flex flex-col gap-3">
             <NavItem
-              icon={Users}
+              icon={LayoutDashboard}
               title="Dashboard"
               selected
             />
 
             <NavItem
-              icon={Users}
-              title="Funcionários"
+              icon={PieChart}
+              title="Analytics"
             />
 
             <NavItem
-              icon={Users}
+              icon={Package}
               title="Orders"
             />
 
@@ -100,8 +100,9 @@ export function Navigation() {
             />
 
             <NavItem
-              icon={Users}
-              title="Sales"
+              icon={MessageCircleMore}
+              title="Messages"
+              notifications={16}
             />
           </div>
 
@@ -111,9 +112,8 @@ export function Navigation() {
 
           <div className="flex flex-col gap-3">
             <NavItem
-              icon={Users}
+              icon={Settings}
               title="Settings"
-              selected
             />
           </div>
         </div>
