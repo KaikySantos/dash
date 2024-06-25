@@ -29,8 +29,8 @@ export const NavItem = ({
       {title}
 
       {notifications && (
-        <div className="ml-auto bg-primary rounded-full w-8 h-6 flex items-center justify-center">
-          <span className="text-xs text-primary-foreground">
+        <div className="ml-auto bg-accent rounded-full w-8 h-6 flex items-center justify-center">
+          <span className="text-xs text-accent-foreground font-bold">
             {notifications}
           </span>
         </div>
