@@ -32,5 +32,25 @@
       "Date": "Data",
       "Amount": "Valor Total"
     }
+  },
+  "SettingsModal": {
+    "Title": "Configurações",
+    "Appearence": {
+      "Label": "Aparência",
+      "Description": "Personalize a aparência do Dash no seu dispositivo"
+    },
+    "Language": {
+      "Label": "Idioma",
+      "Description": "Personalize o idioma do Dash no seu dispositivo"
+    },
+    "AppearenceOptions": {
+      "Light": "Claro",
+      "Dark": "Escuro",
+      "System": "Sistema"
+    },
+    "LanguageOptions": {
+      "English": "Inglês",
+      "Portuguese": "Português"
+    }
   }
 }

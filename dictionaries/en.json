@@ -32,5 +32,25 @@
       "Date": "Date",
       "Amount": "Amount"
     }
+  },
+  "SettingsModal": {
+    "Title": "Settings",
+    "Appearence": {
+      "Label": "Appearence",
+      "Description": "Customize how Dash looks on your device"
+    },
+    "Language": {
+      "Label": "Language",
+      "Description": "Customize the language of Dash on your device"
+    },
+    "AppearenceOptions": {
+      "Light": "Light",
+      "Dark": "Dark",
+      "System": "System"
+    },
+    "LanguageOptions": {
+      "English": "English",
+      "Portuguese": "Portuguese"
+    }
   }
 }

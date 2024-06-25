@@ -11,8 +11,12 @@ import { Label } from "@/components/ui/label"
 
 import { ThemeToggle } from "@/components/theme-toggle"
 import { LocaleToggle } from "@/components/locale-toggle"
+import { DialogDescription } from "@radix-ui/react-dialog"
+
+import { useTranslations } from "next-intl"
 
 export const SettingsModal = () => {
+  const t = useTranslations("SettingsModal")
   const settings = useSettings()
 
   return (
@@ -20,16 +24,19 @@ export const SettingsModal = () => {
       <DialogContent>
         <DialogHeader className="border-b pb-3">
           <DialogTitle className="text-lg font-medium">
-            Settings
+            {t("Title")}
           </DialogTitle>
+          <DialogDescription>
+
+          </DialogDescription>
         </DialogHeader>
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-1">
             <Label>
-              Appearence
+              {t("Appearence.Label")}
             </Label>
             <span className="text-[0.8rem] text-muted-foreground">
-              Customize how Anotai looks on your device
+              {t("Appearence.Description")}
             </span>
           </div>
           <ThemeToggle />
@@ -38,10 +45,10 @@ export const SettingsModal = () => {
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-1">
             <Label>
-              Language
+              {t("Language.Label")}
             </Label>
             <span className="text-[0.8rem] text-muted-foreground">
-              Customize how Anotai looks on your device
+              {t("Language.Description")}
             </span>
           </div>
           <LocaleToggle />
