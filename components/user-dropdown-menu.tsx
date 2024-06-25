@@ -29,22 +29,7 @@ export function UserDropdownMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div
-          role="button"
-          className="flex items-center gap-2 cursor-pointer hover:bg-primary/20 p-2"
-        >
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>KS</AvatarFallback>
-          </Avatar>
-
-          <div className="flex flex-col">
-            <p className="text-primary text-sm font-medium">Kaiky Santos</p>
-            <p className="text-muted-foreground text-xs">carlos.kaiky62@gmail.com</p>
-          </div>
-
-          <ChevronDown className="w-4 h-4 text-muted-foreground" />
-        </div>
+        
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel className="font-medium">
