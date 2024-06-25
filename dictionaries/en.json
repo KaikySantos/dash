@@ -1,21 +1,16 @@
 {
-  "Navbar": {
-    "UserDropdown": {
-      "Theme": {
-        "Label": "Theme",
-        "Options": {
-          "Light": "Light",
-          "Dark": "Dark"
-        }
-      },
-      "Language": {
-        "Label": "Language",
-        "Options": {
-          "English": "English",
-          "Portuguese": "Portuguese"
-        }
-      },
-      "Log Out": "Log out"
+  "Navigation": {
+    "Labels": {
+      "Menu": "MENU",
+      "Account": "ACCOUNT"
+    },
+    "NavItems": {
+      "Dashboard": "Dashboard",
+      "Analytics": "Analytics",
+      "Orders": "Orders",
+      "Customers": "Customers",
+      "Messages": "Messages",
+      "Settings": "Settings"
     }
   }
 }

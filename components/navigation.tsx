@@ -8,9 +8,12 @@ import { useMediaQuery } from "usehooks-ts"
 
 import { ClipboardList, LayoutDashboard, LineChart, ListOrdered, MenuIcon, MessageCircleMore, Package, PieChart, Settings, Users } from "lucide-react"
 
+import { useTranslations } from "next-intl"
 import { NavItem } from "./nav-item"
 
 export function Navigation() {
+  const t = useTranslations("Navigation")
+
   const pathname = usePathname()
   const isMobile = useMediaQuery("(max-width: 768px)")
 
@@ -74,46 +77,46 @@ export function Navigation() {
           </h2>
 
           <p className="mt-8 mb-4 text-muted-foreground text-sm tracking-wider">
-            MENU
+            {t("Labels.Menu")}
           </p>
 
           <div className="flex flex-col gap-3">
             <NavItem
               icon={LayoutDashboard}
-              title="Dashboard"
+              title={t("NavItems.Dashboard")}
               selected
             />
 
             <NavItem
               icon={PieChart}
-              title="Analytics"
+              title={t("NavItems.Analytics")}
             />
 
             <NavItem
               icon={Package}
-              title="Orders"
+              title={t("NavItems.Orders")}
             />
 
             <NavItem
               icon={Users}
-              title="Customers"
+              title={t("NavItems.Customers")}
             />
 
             <NavItem
               icon={MessageCircleMore}
-              title="Messages"
+              title={t("NavItems.Messages")}
               notifications={16}
             />
           </div>
 
           <p className="mt-8 mb-4 text-muted-foreground text-sm tracking-wider">
-            ACCOUNT
+            {t("Labels.Account")}
           </p>
 
           <div className="flex flex-col gap-3">
             <NavItem
               icon={Settings}
-              title="Settings"
+              title={t("NavItems.Settings")}
             />
           </div>
         </div>

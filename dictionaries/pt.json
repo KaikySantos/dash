@@ -1,21 +1,16 @@
 {
-  "Navbar": {
-    "UserDropdown": {
-      "Theme": {
-        "Label": "Tema",
-        "Options": {
-          "Light": "Claro",
-          "Dark": "Escuro"
-        }
-      },
-      "Language": {
-        "Label": "Idioma",
-        "Options": {
-          "English": "Inglês",
-          "Portuguese": "Português"
-        }
-      },
-      "Log Out": "Sair"
+  "Navigation": {
+    "Labels": {
+      "Menu": "MENU",
+      "Account": "CONTA"
+    },
+    "NavItems": {
+      "Dashboard": "Dashboard",
+      "Analytics": "Análise",
+      "Orders": "Pedidos",
+      "Customers": "Clientes",
+      "Messages": "Mensagens",
+      "Settings": "Configurações"
     }
   }
 }
